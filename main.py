@@ -1,7 +1,7 @@
 def game_setup() -> None:
     """prépare les variables ainsi que les configurations si c'est pour jouer contre l'ordi ou pas"""
     from secrets import choice
-    from horse import generate_run
+    from horse import run_horse
     from le_compte_est_bon import game
     from nimes_et_variation import game_nime, game_variation
     from utils_main import input_name_user, choice_game_user, input_number_user
@@ -19,7 +19,7 @@ def game_setup() -> None:
     elif game_choice == "Marienbad":
         game_variation(liste_user, i , user)
     elif game_choice == "pmu":
-        generate_run()
+        run_horse()
     else:
         game()
 
