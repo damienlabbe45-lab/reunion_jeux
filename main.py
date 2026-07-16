@@ -1,8 +1,3 @@
-from horse import generate_run
-from le_compte_est_bon import game
-from nimes_et_variation import game_nime, game_variation
-
-
 def input_name_user() -> str:
     """fonction servant à demander à l'utilisateur de mettre un nom"""
     return input("entrez votre nom")
@@ -33,6 +28,9 @@ def input_number_user() -> int:
 def game_setup() -> None:
     """prépare les variables ainsi que les configurations si c'est pour jouer contre l'ordi ou pas"""
     from secrets import choice
+    from horse import generate_run
+    from le_compte_est_bon import game
+    from nimes_et_variation import game_nime, game_variation
     game_choice = choice_game_user()
     number_user = input_number_user()
     liste_user = []
