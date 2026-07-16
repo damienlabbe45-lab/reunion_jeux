@@ -1,32 +1,7 @@
-
-def choice_computer_matches(number_matches: int) -> int:
-    """choix de l'ordinateur pour les allumettes"""
-    if number_matches % 5 != 1 and number_matches > 5:
-        number = 5 - number_matches % 5 
-    elif 1 < number_matches <= 5:
-        number = number_matches - 1
-    else:
-        from secrets import choice
-        number = choice(list(range(1, min(5, number_matches + 1))))
-    return number
-
-
-def choice_computer_heap_matches(list_heap_matches:list[str]) -> int :
-    """fonction permettant à l'ordinateur de choisir le tas d'allumette"""
-    heap_matches = [heap for heap in list_heap_matches if len(heap)> 1]
-    if len(heap_matches) > 1:
-        from secrets import choice
-        heap = list_heap_matches.index(choice(heap_matches))
-    elif len(heap_matches) == 1:
-        heap = list_heap_matches.index(heap_matches[0])
-    else:
-        heap = 0
-    return heap
-
 def game_nime(liste_user : list[str], i: int,user: str) -> None:
     """fonction permettant de créé le jeu de nime"""
     matches = " "*21
-    from utils import input_number_matches_user
+    from utils import input_number_matches_user, choice_computer_matches
     while len(matches) > 0:
         print(f"il reste {len(matches)} allumettes")
         if user != "\n":
@@ -46,7 +21,7 @@ def game_nime(liste_user : list[str], i: int,user: str) -> None:
 def game_variation(liste_user : list[str], i: int ,user: str) -> None:
     """fonction permettant de créé le jeu de Marienbad"""
     list_matches = [" ", " " * 3, " " * 5, " " * 7]
-    from utils import input_number_matches_user, input_numberheapmatches_user
+    from utils import input_number_matches_user, input_numberheapmatches_user, choice_computer_matches, choice_computer_heap_matches
     while all(len(heap) >0 for heap in list_matches):
         for heap in range(1,5):
             print(f" le tas numéro  {heap} a {len(list_matches[heap - 1])}")
