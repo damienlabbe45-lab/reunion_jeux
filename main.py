@@ -22,6 +22,7 @@ def game_setup() -> None:
         run_horse()
     else:
         game()
+    print("Merci d'avoir joué")
 
 
 def main() -> None:
@@ -33,7 +34,7 @@ def main() -> None:
             "du clavier")
         if user == "":
             user = None
-    print("Merci d'avoir joué")
+    
 
 
 if __name__ == '__main__':
