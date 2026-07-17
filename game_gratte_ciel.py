@@ -15,7 +15,7 @@ def user(number: int, liste_number: list[str]) -> tuple[int | str, int | str, in
 
 
 async def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
-    from utils import print_gratte_ciel, input_resolve
+    from utils_gratteciel import print_gratte_ciel, input_resolve
     resolution = True
     while (matrice != solution).any().any():
         print_gratte_ciel(matrice, solution)
@@ -35,7 +35,7 @@ async def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
 def auto_resolution(matrice: DataFrame, solution: DataFrame, number: int) -> DataFrame:
     from auto_resolution import logique_ligne, logique_col, auto_resolp2
     from creation_gratteciel import  suppr_data
-    from utils import generate_indice, print_solution2, initialiser_possibilites, log_to_file
+    from utils_gratteciel import generate_indice, print_solution2, initialiser_possibilites, log_to_file
     log_to_file("la solution est:")
     print_solution2(solution)
     log_to_file("voici comment faire:")
@@ -55,7 +55,7 @@ def auto_resolution(matrice: DataFrame, solution: DataFrame, number: int) -> Dat
     matrice = auto_resolp2(matrice.copy(), solution, comb, ind_ligne, ind_col)  # type: ignore
     if (matrice != solution).any().any():
         from auto_resolution import run_hypothesis
-        from utils import print_gratte_ciel2
+        from utils_gratteciel import print_gratte_ciel2
         matrice = run_hypothesis(matrice.copy(), solution, comb, {},
                              ind_ligne, ind_col)  # type: ignore
         print_gratte_ciel2(matrice,solution)

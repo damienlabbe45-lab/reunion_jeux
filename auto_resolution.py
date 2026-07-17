@@ -1,5 +1,5 @@
 from pandas import DataFrame
-from utils import print_gratte_ciel2, log_to_file
+from utils_gratteciel import print_gratte_ciel2, log_to_file
 
 
 def logique_ligne(matrice: DataFrame, ind_ligne: list[tuple[str, str]], number: int, liste_number: list[int],
@@ -54,7 +54,7 @@ def logique_col(matrice: DataFrame, ind_col: list[tuple[str, str]], number: int,
 
 def auto_resolp2(matrice: DataFrame, solution: DataFrame, possibilites: dict[tuple[int, int], set[int]],
                  ind_ligne: list[tuple[str, str]], ind_col: list[tuple[str, str]]) -> DataFrame | None:
-    from utils import logic, list_max
+    from utils_gratteciel import logic, list_max
     from itertools import permutations
     number = len(matrice)
     n: bool = True
@@ -112,7 +112,7 @@ def run_hypothesis(matrix: DataFrame, solution: DataFrame, combinations: dict[tu
                    tested_hypotheses: dict[tuple[int, int], list[int]],
                    row_indicators: list[tuple[str, str]], col_indicators: list[tuple[str, str]]) -> DataFrame:
     from secrets import choice
-    from utils import find_coor, print_gratte_ciel, print_gratte_ciel2, print_solution, log_to_file
+    from utils_gratteciel import find_coor, print_gratte_ciel, print_gratte_ciel2, print_solution, log_to_file
     from auto_resolution import auto_resolp2
     from copy import deepcopy
     matrix_copy = matrix.copy()
