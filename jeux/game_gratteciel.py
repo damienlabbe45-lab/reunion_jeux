@@ -33,8 +33,8 @@ async def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
 
 
 def auto_resolution(matrice: DataFrame, solution: DataFrame, number: int) -> DataFrame:
-    from auto_resolution_gratteciel import logique_ligne, logique_col, auto_resolp2
-    from creation_gratteciel import  suppr_data
+    from jeux.auto_resolution_gratteciel import logique_ligne, logique_col, auto_resolp2
+    from jeux.creation_gratteciel import  suppr_data
     from utils.utils_gratteciel import generate_indice, print_solution2, initialiser_possibilites, log_to_file
     log_to_file("la solution est:")
     print_solution2(solution)
@@ -54,7 +54,7 @@ def auto_resolution(matrice: DataFrame, solution: DataFrame, number: int) -> Dat
                           number, liste_number, solution)
     matrice = auto_resolp2(matrice.copy(), solution, comb, ind_ligne, ind_col)  # type: ignore
     if (matrice != solution).any().any():
-        from auto_resolution_gratteciel import run_hypothesis
+        from jeux.auto_resolution_gratteciel import run_hypothesis
         from utils.utils_gratteciel import print_gratte_ciel2
         matrice = run_hypothesis(matrice.copy(), solution, comb, {},
                              ind_ligne, ind_col)  # type: ignore

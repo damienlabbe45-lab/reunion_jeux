@@ -1,13 +1,13 @@
 def game_setup() -> None:
     """prépare les variables ainsi que les configurations si c'est pour jouer contre l'ordi ou pas"""
     from secrets import choice
-    from horse import run_horse
-    from le_compte_est_bon import game
-    from bataille_navale import war_ship
-    from nimes_et_variation import game_nime, game_variation
+    from jeux.horse import run_horse
+    from jeux.le_compte_est_bon import game
+    from jeux.bataille_navale import war_ship
+    from jeux.nimes_et_variation import game_nime, game_variation
     from utils.utils_main import input_name_user, choice_game_user, input_number_user
     from asyncio import run
-    from creation_gratteciel import bulding
+    from jeux.creation_gratteciel import bulding
     game_choice = choice_game_user()
     number_user = input_number_user(2, "Veuillez indiquer le nombre de joueurs (1 ou 2)\n" , False)
     liste_user = []

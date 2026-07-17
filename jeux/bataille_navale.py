@@ -2,7 +2,7 @@ from pandas import DataFrame
 
 
 def war_ship():
-    from creation_bataille_navale import battleship, generate_grille, create_matrice
+    from jeux.creation_bataille_navale import battleship, generate_grille, create_matrice
     matrice: DataFrame = battleship(create_matrice())
     grille_ship = generate_grille(matrice.copy())
     game(grille_ship, matrice)

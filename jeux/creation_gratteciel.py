@@ -3,7 +3,7 @@ from pandas import DataFrame
 
 async def bulding() -> None:
     from asyncio import gather
-    from game_gratteciel import game
+    from jeux.game_gratteciel import game
     number = intialize()
     matrice = generate_solution(await gather(create_matrice(number), combination(number)))
     matrice_game = suppr_data(matrice.copy(), number)
