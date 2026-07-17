@@ -34,7 +34,7 @@ async def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
 
 def auto_resolution(matrice: DataFrame, solution: DataFrame, number: int) -> DataFrame:
     from auto_resolution import logique_ligne, logique_col, auto_resolp2
-    from creation import  suppr_data
+    from creation_gratteciel import  suppr_data
     from utils import generate_indice, print_solution2, initialiser_possibilites, log_to_file
     log_to_file("la solution est:")
     print_solution2(solution)
