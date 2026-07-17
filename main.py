@@ -34,7 +34,7 @@ def main() -> None:
             "du clavier")
         if user == "":
             user = None
-    
+    print("à une prochaine fois ^^.")
 
 
 if __name__ == '__main__':
