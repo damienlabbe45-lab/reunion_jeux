@@ -3,7 +3,7 @@ def game_setup() -> None:
     from secrets import choice
     from horse import run_horse
     from le_compte_est_bon import game
-    from game import war_ship
+    from bataille_navale import war_ship
     from nimes_et_variation import game_nime, game_variation
     from utils_main import input_name_user, choice_game_user, input_number_user
     game_choice = choice_game_user()
