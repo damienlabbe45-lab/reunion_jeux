@@ -25,7 +25,7 @@ def input_resolve(columns: list[str]) -> tuple[str, int]:
 
 def game(matrice: DataFrame, matrice_user: DataFrame) -> None:
     """fonction pour faire tourner le jeu jusqu'à qu'on gagne"""
-    from utils import find_coor, find_not_coor
+    from utils_bataille_navale import find_coor, find_not_coor
     while find_not_coor(matrice, "") != find_coor(matrice_user, "x"):
         print(matrice_user)
         col, row = input_resolve(list(matrice_user.columns))
