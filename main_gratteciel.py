@@ -10,7 +10,3 @@ async def main() -> None:
     matrice_game = suppr_data(matrice.copy(), number)
     game(matrice_game, matrice, number)
     print("Merci d'avoir jouer")
-
-
-if __name__ == '__main__':
-    run(main())
