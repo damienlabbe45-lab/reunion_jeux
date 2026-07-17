@@ -1,6 +1,14 @@
 from pandas import DataFrame
 
 
+def war_ship():
+    from creation import battleship, generate_grille, create_matrice
+    from game import game
+    matrice: DataFrame = battleship(create_matrice())
+    grille_ship = generate_grille(matrice.copy())
+    game(grille_ship, matrice)
+
+
 def input_resolve(columns: list[str]) -> tuple[str, int]:
     """fonction servant à avoir les inputs du joueur jusqu'à qu'il met des coordonnées valides"""
     number = None
