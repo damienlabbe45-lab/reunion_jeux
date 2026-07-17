@@ -13,12 +13,12 @@ def choice_game_user() -> str:
     return game
 
 
-def input_number_user(number_use: int, prompt: str, boole_ind: bool) -> int:
+def input_number_user(max: int, prompt: str, boole_ind: bool, min: int= 1) -> int:
     """demander à l'utilisateur de dire quel nombre il va utiliser"""
     number = None
     while number is None:
         number = input(prompt)
-        if number in [str(i) for i in range(1, number_use + 1)]:
+        if number in [str(i) for i in range(min, max + 1)]:
             if boole_ind:
                 number =int(number) - 1
             else:
