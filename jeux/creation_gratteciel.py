@@ -7,7 +7,7 @@ async def bulding() -> None:
     number = intialize()
     matrice = generate_solution(await gather(create_matrice(number), combination(number)))
     matrice_game = suppr_data(matrice.copy(), number)
-    game(matrice_game, matrice, number)
+    game(matrice_game, matrice, number) 
 
 
 def intialize2() -> int:

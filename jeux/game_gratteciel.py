@@ -14,7 +14,7 @@ def user(number: int, liste_number: list[str]) -> tuple[int | str, int | str, in
     return user_col, user_ligne, user_state
 
 
-async def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
+def game(matrice: DataFrame, solution: DataFrame, number: int) -> None:
     from utils.utils_gratteciel import print_gratte_ciel, input_resolve
     resolution = True
     while (matrice != solution).any().any():
