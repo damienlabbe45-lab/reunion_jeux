@@ -1,6 +1,6 @@
 def game() -> None:
     """cette fonction sert pour jouer au compte est bon."""
-    from utils_le_compte_est_bon import random_numbers, user_break, input_numbers, input_operator, arithmetic_operation
+    from utils.utils_le_compte_est_bon import random_numbers, user_break, input_numbers, input_operator, arithmetic_operation
     number_choice, liste_number = random_numbers()
     number_user = None
     while number_user is None:

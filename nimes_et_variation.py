@@ -1,8 +1,8 @@
 def game_nime(liste_user : list[str], i: int,user: str) -> None:
     """fonction permettant de créé le jeu de nime"""
     matches = " "*21
-    from utils_nimes_et_variation import choice_computer_matches
-    from utils_main import input_number_user
+    from utils.utils_nimes_et_variation import choice_computer_matches
+    from utils.utils_main import input_number_user
     while len(matches) > 0:
         print(f"il reste {len(matches)} allumettes")
         if user != "\n":
@@ -15,15 +15,15 @@ def game_nime(liste_user : list[str], i: int,user: str) -> None:
             matches = matches[number_matches:]
             i +=1
         user = liste_user[i % 2]
-    from utils_nimes_et_variation import winner
+    from utils.utils_nimes_et_variation import winner
     winner(liste_user[i  % 2])
 
 
 def game_variation(liste_user : list[str], i: int ,user: str) -> None:
     """fonction permettant de créé le jeu de Marienbad"""
     list_matches = [" ", " " * 3, " " * 5, " " * 7]
-    from utils_nimes_et_variation import  choice_computer_matches, choice_computer_heap_matches
-    from utils_main import input_number_user
+    from utils.utils_nimes_et_variation import  choice_computer_matches, choice_computer_heap_matches
+    from utils.utils_main import input_number_user
     while all(len(heap) >0 for heap in list_matches):
         for heap in range(1,5):
             print(f" le tas numéro  {heap} a {len(list_matches[heap - 1])}")
@@ -39,5 +39,5 @@ def game_variation(liste_user : list[str], i: int ,user: str) -> None:
             list_matches[heap_matches] = list_matches[heap_matches][number_matches:]
             i +=1
         user = liste_user[i % 2]
-    from utils_nimes_et_variation import winner
+    from utils.utils_nimes_et_variation import winner
     winner(liste_user[i  % 2])

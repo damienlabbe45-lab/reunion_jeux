@@ -1,6 +1,6 @@
 def run_horse() -> None:
     """fonction servant à faire la course avec les chevaux"""
-    from utils_horse import generate_run, input_type_run, input_user, print_results
+    from utils.utils_horse import generate_run, input_type_run, input_user, print_results
     dict_horse = generate_run()
     type_run = input_type_run()
     results_run = []
