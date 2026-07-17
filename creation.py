@@ -49,7 +49,8 @@ def assign_value(matrice: DataFrame, coor: list[tuple[Any, Any]], value: str) ->
 def generate_grille(matrix: DataFrame) -> DataFrame:
     """on choisit aléatoirement les coordonnées de la grille"""
     from secrets import choice
-    from utils import find_coor, find_not_coor, append_coor, verify_coor
+    from utils import find_coor, find_not_coor
+    from utils_creation_bataille_navale import append_coor, verify_coor
     list_dir = ["haut", "bas", "droite", "gauche"]
     for length_ship in zip([2, 3, 3, 4, 4, 5],range(1,6)):
         coor = find_coor(matrix, "")
