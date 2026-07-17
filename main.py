@@ -6,6 +6,8 @@ def game_setup() -> None:
     from bataille_navale import war_ship
     from nimes_et_variation import game_nime, game_variation
     from utils_main import input_name_user, choice_game_user, input_number_user
+    from asyncio import run
+    from creation_gratteciel import bulding
     game_choice = choice_game_user()
     number_user = input_number_user()
     liste_user = []
@@ -25,6 +27,8 @@ def game_setup() -> None:
         game()
     elif game_choice == "bataille navale":
         war_ship()
+    elif game_choice == "gratteciel":
+        run(bulding())
     print("Merci d'avoir joué")
 
 
