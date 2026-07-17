@@ -9,7 +9,7 @@ def game_setup() -> None:
     from asyncio import run
     from creation_gratteciel import bulding
     game_choice = choice_game_user()
-    number_user = input_number_user()
+    number_user = input_number_user(2, "Veuillez indiquer le nombre de joueurs (1 ou 2)\n" , False)
     liste_user = []
     for _ in range(number_user):
         liste_user.append(input_name_user())
