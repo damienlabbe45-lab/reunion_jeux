@@ -8,7 +8,7 @@ def choice_game_user() -> str:
     game = None
     while game is None:
         game = input("Veuillez indiquer le jeu (nime ou Marienbad ou pmu ou le compte est bon)\n")
-        if game not in ["nime", "Marienbad", "pmu", "le compte est bon"] :
+        if game not in ["nime", "Marienbad", "pmu", "le compte est bon", "bataille navale"] :
             game = None
     return game
 
