@@ -10,11 +10,6 @@ async def bulding() -> None:
     game(matrice_game, matrice, number) 
 
 
-def intialize2() -> int:
-    from secrets import choice
-    return choice(range(4,7))
-
-
 def intialize() -> int:
     number = None
     while number is None:
