@@ -7,7 +7,7 @@ def random_numbers() -> tuple[int, list[int]]:
 def input_numbers(numbers: list[int]) -> list[int]:
     """cette fonction permet de connaître les nombres souhaités par l'utilisateur 
     le {', '.join(f'{i}' for i in number_list )}} provient de {', '.join(f':r{i}' for i in range(len(roles)))}
-    (vient de mon projet personnel)"""
+    (vient de mon projet personnel (dépot privé mais accesible sur demande, par contre il y a du poo avancée ainsi que des await et autre.))"""
     numbers_user: list[int] = []
     while len(numbers_user) != 2:
         number_list = [i for i in numbers if i not in numbers_user]
@@ -51,7 +51,7 @@ def arithmetic_operation(numbers: list[int], operation: str) -> int:
     elif operation == "*":
         number = numbers[0] * numbers[1]
     elif operation == "-":
-        number = numbers[0] - numbers[1]
+        number = abs(numbers[0] - numbers[1])
     elif operation == "/":
         number = int(numbers[0] / numbers[1])
     return number
