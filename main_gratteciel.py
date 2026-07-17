@@ -4,7 +4,7 @@ from creation_gratteciel import generate_solution, combination, create_matrice, 
 from game_gratteciel import game
 
 
-async def main() -> None:
+async def bulding() -> None:
     number = intialize()
     matrice = generate_solution(await gather(create_matrice(number), combination(number)))
     matrice_game = suppr_data(matrice.copy(), number)
