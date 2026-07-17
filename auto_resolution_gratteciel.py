@@ -113,7 +113,7 @@ def run_hypothesis(matrix: DataFrame, solution: DataFrame, combinations: dict[tu
                    row_indicators: list[tuple[str, str]], col_indicators: list[tuple[str, str]]) -> DataFrame:
     from secrets import choice
     from utils_gratteciel import find_coor, print_gratte_ciel, print_gratte_ciel2, print_solution, log_to_file
-    from auto_resolution_gratte_ciel import auto_resolp2
+    from auto_resolution_gratteciel import auto_resolp2
     from copy import deepcopy
     matrix_copy = matrix.copy()
     grid_size = len(matrix)
